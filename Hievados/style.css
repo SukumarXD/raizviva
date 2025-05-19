@@ -1,0 +1,172 @@
+:root {
+  --verde-claro: #a5d6a7;
+  --verde-medio: #66bb6a;
+  --verde-oscuro: #388e3c;
+  --blanco: #ffffff;
+  --gris-claro: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  color: var(--verde-oscuro);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contenedor-centrado {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--verde-oscuro);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--verde-claro);
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+  background-color: var(--verde-medio);
+  transform: scale(1.05);
+}
+
+/* Productos */
+.producto {
+  background-color: var(--gris-claro);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.faq {
+  background-color: #f9fbe7;
+  padding: 40px 20px;
+}
+
+.faq h2 {
+  margin-bottom: 30px;
+}
+
+.pregunta {
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pregunta h3 {
+  color: var(--verde-medio);
+  margin-bottom: 8px;
+}
+
+.pregunta p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.descripcion-adicional {
+  margin-top: 10px;
+  background-color: #f0f8f5;
+  padding: 10px;
+  border-left: 4px solid #4CAF50;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .producto {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .boton {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .faq .pregunta {
+    margin: 10px;
+    padding: 10px;
+  }
+}
